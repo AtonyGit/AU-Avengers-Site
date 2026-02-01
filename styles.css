@@ -1,0 +1,113 @@
+:root {
+    --base-color: #eeeeee;
+    --base-variant: #e8e9ed;
+    --text-color: #000000;
+    --secondary-text: #111528;
+    --primary-color: #3a435d;
+    --accent-color: #940000;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+.darkmode {
+    --base-color: #302d2d;
+    --base-variant: #26262e;
+    --text-color: #ffffff;
+    --secondary-text: #d9dff3;
+    --primary-color: #fff0f0;
+    --accent-color: #e64747;
+}
+
+#theme-switch {
+    height: 61px;
+    width: 61px;
+    padding: 0;
+    background-color: var(--base-variant);
+    color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+#theme-switch svg:last-child {
+    display: none;
+}
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+body {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    accent-color: var(--accent-color);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--base-variant);
+    border-bottom: 1px solid;
+    margin-left: auto;
+    margin-right: 35px;
+}
+.icon {
+    /* Adjust size as needed */
+    width: 40px;
+    height: auto;
+}
+.icotext {
+    /* Adjust size as needed */
+    width: 50px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: auto;
+}
+.logo {
+    /* Adjust size as needed */
+    align-items: center;
+    padding: 10px 20px;
+    width: auto;
+    height: 200px;
+    border-bottom: 1px solid var(--base-color);
+    display: block; /* Images are inline by default, so set to block */
+    margin-left: auto;
+    margin-right: auto;
+}
+.titlecontainer {
+    /* Adjust size as needed */
+    align-items: center;
+}
+a {
+    color: var(--accent-color);
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+.centered-block {
+    text-align: center;
+    align-items: center;
+    display: block; /* Images are inline by default, so set to block */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Optional, but recommended */
+}
+.parent-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 100vh;           /* Example: centers in the full viewport height */
+}
