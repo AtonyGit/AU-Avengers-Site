@@ -60,6 +60,26 @@ header {
     margin-left: auto;
     margin-right: 35px;
 }
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+    background-color: var(--base-variant);
+    border-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-long {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0;
+    background-color: var(--base-variant);
+    border-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
 .icon {
     /* Adjust size as needed */
     width: 40px;
@@ -78,6 +98,17 @@ header {
     padding: 10px 20px;
     width: auto;
     height: 200px;
+    border-bottom: 1px solid var(--base-color);
+    display: block; /* Images are inline by default, so set to block */
+    margin-left: auto;
+    margin-right: auto;
+}
+.screenshot {
+    /* Adjust size as needed */
+    align-items: center;
+    padding: 10px 20px;
+    width: auto;
+    height: 300px;
     border-bottom: 1px solid var(--base-color);
     display: block; /* Images are inline by default, so set to block */
     margin-left: auto;
@@ -110,4 +141,33 @@ main {
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
     height: 100vh;           /* Example: centers in the full viewport height */
+}
+.scroll-container {
+    width: 100%;
+    overflow: hidden; /* Hides the extra images initially */
+    white-space: nowrap; /* Prevents images from wrapping to a new line */
+    box-sizing: border-box;
+}
+
+.image-wrapper {
+    display: inline-block;
+    /* Double the width to accommodate two sets of images */
+    width: 165%;
+    animation: autoscroll 15s linear infinite; /* Adjust duration as needed */
+}
+
+.image-wrapper img {
+    height: 100px; /* Adjust height as needed */
+    width: auto;
+    display: inline-block;
+}
+
+@keyframes autoscroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        /* Moves the entire wrapper by 50% of its width */
+        transform: translate3d(-100%, 0, 0);
+    }
 }
