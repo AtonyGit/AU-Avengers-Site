@@ -31,3 +31,28 @@
     text-align: center;
     width: 100%;
 }
+
+:root {
+    --base-color: #eeeeee;
+    --base-variant: #e8e9ed;
+    --text-color: #000000;
+    --secondary-text: #111528;
+    --primary-color: #3a435d;
+    --accent-color: #140094;
+    --purple-color: #9898c1;
+    --hero-color: #000000;
+    --hero-subtitle: #3b0094;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+.darkmode {
+    --base-color: #2e2d30;
+    --base-variant: #26262e;
+    --text-color: #ffffff;
+    --secondary-text: #d9dff3;
+    --primary-color: #f0f3ff;
+    --accent-color: #a68ffb;
+    --purple-color: #101029;
+    --hero-color: #FFFFFF;
+    --hero-subtitle: #6055ff;
+}
