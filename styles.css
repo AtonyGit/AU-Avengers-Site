@@ -5,6 +5,9 @@
     --secondary-text: #111528;
     --primary-color: #3a435d;
     --accent-color: #940000;
+    --purple-color: #9898c1;
+    --hero-color: #000000;
+    --hero-subtitle: #940000;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -15,6 +18,9 @@
     --secondary-text: #d9dff3;
     --primary-color: #fff0f0;
     --accent-color: #e64747;
+    --purple-color: #101029;
+    --hero-color: #FFFFFF;
+    --hero-subtitle: #ff6955;
 }
 
 #theme-switch {
@@ -48,7 +54,7 @@ body {
     accent-color: var(--accent-color);
     font-family: sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: 61px;
 }
 header {
     display: flex;
@@ -58,7 +64,23 @@ header {
     background-color: var(--base-variant);
     border-bottom: 1px solid;
     margin-left: auto;
+}
+.headeralt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--base-variant);
+    border-bottom: 1px solid;
+    margin-left: auto;
     margin-right: 35px;
+    height: 40px;
+    width: 100%;
+    z-index: 1000;
+    color: var(--accent-color);
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid var(--primary-color);
 }
 footer {
     display: flex;
@@ -137,8 +159,23 @@ footer {
 a {
     color: var(--accent-color);
 }
+.heroBanner {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.miranav {
+    align-items: center;
+    display: flex;
+    left: 40px;
+}
+.miranav a {
+    margin: 0 15px;
+    text-decoration: none;
+}
 nav a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
 }
 main {
